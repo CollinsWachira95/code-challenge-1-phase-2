@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SearchBar({ onSearch }) {
+function TransactionSearch({ onSearch }) {
   const handleSearchChange = (event) => {
     onSearch(event.target.value);
   };
@@ -10,4 +10,4 @@ function SearchBar({ onSearch }) {
   );
 }
 
-export default SearchBar;
+export default TransactionSearch;

@@ -14,7 +14,7 @@ function TransactionForm({ onTransactionAdded }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('/transactions', {
+    fetch('http://localhost:3000/transactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

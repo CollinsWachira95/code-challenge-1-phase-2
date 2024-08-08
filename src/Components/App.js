@@ -1,24 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import TransactionList from './TransactionList';
+import TransactionSearch from './TransactionSearch';
 import TransactionForm from './TransactionForm';
-import SearchBar from './SearchBar';
+import TransactionList from './TransactionList';
 
 function App() {
   const [transactions, setTransactions] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch('/transactions');
-        const data = await response.json();
-        setTransactions(data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
+    fetch('http://localhost:3000/transactions')
+      .then(response => response.json())
+      .then(data => setTransactions(data))
+      .catch(error => console.error('Error fetching data:', error));
   }, []);
 
   const handleTransactionAdded = (newTransaction) => {
@@ -41,9 +34,9 @@ function App() {
   return (
     <div className="App">
       <h1>Bank of Flatiron</h1>
-      <SearchBar onSearch={handleSearch} />
-      <TransactionList transactions={filteredTransactions} onDelete={handleTransactionDeleted} />
+      <TransactionSearch onSearch={handleSearch} />
       <TransactionForm onTransactionAdded={handleTransactionAdded} />
+      <TransactionList transactions={filteredTransactions} onDelete={handleTransactionDeleted} />
     </div>
   );
 }
