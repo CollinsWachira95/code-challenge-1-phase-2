@@ -1,71 +1,65 @@
-# Getting Started with Create React App
+BANK OF FLARITON: A React-based Transaction Management Application
+Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application simulates a basic banking system, allowing users to view, add, and delete transactions. It includes features like searching for transactions and displaying data in a tabular format.
 
-## Available Scripts
+Core Functionalities
 
-In the project directory, you can run:
+1. Displays a list of transactions fetched from a JSON server.
+2. Allows users to add new transactions through a form.
+3. Enables users to delete existing transactions.
+4. Provides a search bar to filter transactions based on description.
+5. Implements basic styling for the user interface.
+6. How to Run the Application
 
-### `npm start`
+Prerequisites:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Node.js and npm (or yarn) installed.
+2. A code editor (e.g., Visual Studio Code, Sublime Text).
+3. Basic understanding of React, JavaScript, and terminal commands.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Steps:
 
-### `npm test`
+1.Clone the Repository:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Fork the repository from GitHub to your own account.
+2. Clone your forked repository to your local machine:
 
-### `npm run build`
+The First Command
+git clone git@github.com:CollinsWachira95/code-challenge-1-phase-2.git
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Install Dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. Navigate to the project directory:
+cd bank-of-flatiron
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+4. Install the required dependencies:
+Command: npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+5. Start the Development Server:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Start the development server:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Command: npm start
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The application should open in your default browser at https://backends-sooty.vercel.app/transactions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Code Structure:
+1. App.js: The main component that handles application state and renders other components.
+2. TransactionList.js: Displays a list of transactions with delete functionality.
+3. TransactionForm.js: Handles user input for adding new transactions.
+4. TransactionSearch.js: Implements the search functionality.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+Additional Notes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application uses a JSON server to simulate a backend API. You can start the JSON server by running json-server db.json in a separate terminal.
+The code includes basic styling using CSS. 
 
-### Making a Progressive Web App
+BACKEND : https://backends-sooty.vercel.app/transactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# code-challenge-1-phase-2
+AUTHOR : COLLINS WACHIRA

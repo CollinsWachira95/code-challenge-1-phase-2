@@ -14,7 +14,7 @@ function TransactionForm({ onTransactionAdded }) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:3000/transactions', {
+    fetch('https://backends-sooty.vercel.app/transactions', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
